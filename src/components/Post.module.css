@@ -1,1 +1,72 @@
-.post {}
+.post {
+    background: var(--gray-800);
+    border-radius: 8px;
+    padding: 2.5rem;
+}
+
+/* só será aplicado quando tiver mais de um post, ou seja, quando tiver um post anterior */
+.post+.post {
+    margin-top: 2rem;
+}
+
+.content {
+    line-height: 1.6;
+    color: var(--gray-300);
+    margin-top: 1.5rem;
+}
+
+.content p {
+    margin-top: 1rem;
+}
+
+.content a {
+    font-weight: bold;
+    color: var(--green-500);
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: var(--green-300);
+}
+
+/* o sinal de maior garante que só serão selecionados os filhos diretos do post */
+.post>header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.post>header time {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author img {
+    /* não permite que a imagem diminua por conta do border e outline */
+    box-sizing: initial;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 8px;
+    border: 4px solid var(--gray-800);
+    outline: 2px solid var(--green-500);
+}
+
+.authorInfo strong {
+    display: block;
+    color: var(--gray-100);
+    line-height: 1.6;
+}
+
+.authorInfo span {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
